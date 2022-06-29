@@ -1,1 +1,1 @@
-# scissors-paper-stone
+# Scissors Paper Stone
