@@ -46,7 +46,7 @@ function restartGame() {
 
 function updateImage(playerSelection, computerSelection) {
     let dict = {
-        "stone": "🪨",
+        "stone": "👊",
         "scissors": "🔪",
         "paper": "📄",
     };
@@ -82,7 +82,6 @@ function checkWin() {
         }
     }
 }
-
 
 disableButtons();
 
