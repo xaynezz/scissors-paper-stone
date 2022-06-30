@@ -27,7 +27,6 @@ function playRound(playerSelection, computerSelection) {
                 break;  
         }
     }
-    console.log(result);
     return result;
 }
 
