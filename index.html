@@ -4,57 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scissors Paper Stone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <script>
-        const hand = ["rock", "paper", "scissors"];
-        let playerSelection;
-        let computerSelection;
-        let playerScore = 0;
-        let computerScore = 0;
-        game()
-            
-        function computerPlay() {
-            return hand[Math.floor(Math.random()*hand.length)];
-        }
-        
-        function playRound(playerSelection, computerSelection) {
-            let result = "lose";
-            if (playerSelection == computerSelection) {
-                result = "tie";
-            } else {
-                switch (playerSelection) {
-                    case "rock":
-                        if (computerSelection == "scissors") result = "win";
-                        break;
-                    case "paper": 
-                        if (computerSelection == "rock") result = "win";
-                        break;
-                    case "scissors":  
-                        if (computerSelection == "paper") result = "win";
-                        break;
-                }
-            }
-            console.log(`Your ${playerSelection} ${result}s CPU's ${computerSelection}`)
-            return result;
-        }
-        
-        function game() {
-            while (playerScore < 5 && computerScore < 5) {
-                let playerSelection = prompt("Enter your choice: ").toLowerCase();
-                if (hand.includes(playerSelection)) {
-                    let computerSelection = computerPlay();
-                    result = playRound(playerSelection, computerSelection);
-                    if (result == "win") playerScore += 1;
-                    else if (result == "lose") computerScore += 1;
-                } else {
-                    console.log("Your choice is not valid. Please Re-Enter");
-                }
-                console.log(`Score: You ${playerScore} - ${computerScore} CPU`);
-            }
-            if (playerScore == 5) console.log("You got 5 first! You win!");
-        }
-    </script>
+    <div>
+        <h1>Scissors Paper Stone!</h1>
+        <h2>First to 5</h2>
+    </div>
+    <div class="choose">
+        <div class="player">
+            <div class="box"></div>
+            <h2 class="text">Player 1</h2>
+            <div class="buttons">
+                <button class="scissors">
+                    🔪
+                </button>
+                <button class="paper">
+                    📄
+                </button>
+                <button class="stone">
+                    🪨
+                </button>
+            </div>
+        </div>
+        <div class="score">
+            <button class="start">Start</button>
+            <p class="board"></p>
+            <button class="restart">Restart</button>
+            <p class="message"></p>
+        </div>
+        <div class="cpu">
+            <div class="box"></div>
+            <h2 class="text">CPU</h2>
+            <div class="buttons">
+                <button class="scissors">
+                    🔪
+                </button>
+                <button class="paper">
+                    📄
+                </button>
+                <button class="stone">
+                    🪨
+                </button>
+            </div>
+        </div>
+    </div>
+    <button class="mode">Light</button>
+    <div class="footer">
+        <p>The Odin Project @ 2022</p>
+        <p>Created by <a href="https://github.com/xaynezz" target="_blank">Andrew Oak</a></p>
+    </div>
 </body>
 </html>
