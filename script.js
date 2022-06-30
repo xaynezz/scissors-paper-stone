@@ -46,9 +46,9 @@ function restartGame() {
 
 function updateImage(playerSelection, computerSelection) {
     let dict = {
-        "stone": "👊",
         "scissors": "🔪",
         "paper": "📄",
+        "stone": "👊",
     };
     document.querySelector('.player .box').innerHTML = dict[playerSelection];
     document.querySelector('.cpu .box').innerHTML = dict[computerSelection];
